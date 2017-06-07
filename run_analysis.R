@@ -1,5 +1,4 @@
 ##1. Downloading the file and unziping it. Note: I am using Windows hence I do not need the method argument in download.file.
-
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/Dataset.zip")

@@ -18,8 +18,8 @@ features[,2] <- as.character(features[,2])
 # 3. Extracting the data with the mean and standard deviation.
 features2 <- grep(".*mean.*|.*std.*", features[,2])
 features2.names <- features[features2,2]
-features2.names = gsub('-mean', 'Mean', features2.names)
-features2.names = gsub('-std', 'Std', features2.names)
+features2.names = gsub('-mean', 'MEAN', features2.names)
+features2.names = gsub('-std', 'STD', features2.names)
 features2.names <- gsub('[-()]', '', features2.names)
 
 # 3.1. Loading the datasets: reading the tables by activity and subject. 

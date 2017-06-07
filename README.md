@@ -22,4 +22,4 @@ The code used in this assignment should do the following:
     are required to complete the assignment.
 2. **run_analysis.R** script which is the code for tidying the data set that describes all the steps of organizing it.
 3. **CodeBook.md** which is the description of used variables.
-4. **tidy.txt** which is the clean data (the result of run_analysis.R on the original data)
+4. **tidydata.txt** which is the clean data (the result of run_analysis.R on the original data)

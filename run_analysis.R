@@ -4,7 +4,7 @@ fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 download.file(fileUrl,destfile="./data/Dataset.zip")
 unzip(zipfile="./data/Dataset.zip",exdir="./data")
 
-# Storing the files in UCI HAR Dataset.
+# 1.1. Storing the files in UCI HAR Dataset.
 path_rf <- file.path("./data" , "UCI HAR Dataset")
 files<-list.files(path_rf, recursive=TRUE)
 
@@ -21,15 +21,15 @@ features2.names = gsub('-mean', 'Mean', features2.names)
 features2.names = gsub('-std', 'Std', features2.names)
 features2.names <- gsub('[-()]', '', features2.names)
 
-# Loading the datasets: reading the tables by activity and subject. 
+# 3.1. Loading the datasets: reading the tables by activity and subject. 
 train <- read.table("UCI HAR Dataset/train/X_train.txt")[features2]
 trainActivities <- read.table("UCI HAR Dataset/train/Y_train.txt")
 trainSubjects <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
-# Binding the data of subjects and activities and storing it in t.
+# 3.2. Binding the data of subjects and activities and storing it in t.
 t <- cbind(trainSubjects, trainActivities, t)
 
-# Doing the same for the test part of the code.
+# 3.3. Doing the same for the test part of the code.
 test <- read.table("UCI HAR Dataset/test/X_test.txt")[features2]
 testActivities <- read.table("UCI HAR Dataset/test/Y_test.txt")
 testSubjects <- read.table("UCI HAR Dataset/test/subject_test.txt")

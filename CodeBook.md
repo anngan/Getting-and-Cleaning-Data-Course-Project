@@ -1,6 +1,6 @@
 # CodeBook
 
-## This file includes the descriptions of the code ** run_analysis.R ** as well as the descriptions of the variables.
+## This file includes the descriptions of the code run_analysis.R as well as the descriptions of the variables.
 
 ## Code step by step:
 * 1. Downloading the file and unziping it.

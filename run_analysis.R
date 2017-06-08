@@ -41,7 +41,6 @@ Data <- rbind(t, t2)
 colnames(Data) <- c("subject", "activity", features2.names)
 Data$activity <- factor(Data$activity, levels = activityLabels[,1], labels = activityLabels[,2])
 Data$subject <- as.factor(Data$subject)
-
 Data.melted <- melt(Data, id = c("subject", "activity"))
 Data.mean <- dcast(Data.melted, subject + activity ~ variable, mean)
 

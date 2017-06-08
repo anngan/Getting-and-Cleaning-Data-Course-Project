@@ -11,12 +11,13 @@
 
 
 ## Code step by step:
-* 1. Downloading the file and unziping it.
-* 1.1. Storing the files in UCI HAR Dataset.
+* 0. The code used requires loading 'reshape' package.
+* 1. Downloading the file and unziping it. Note: I am using Windows hence I do not need the 'method' argument in 'download.file'.
+* 1.1. Storing the files in UCI HAR Dataset. Listing the downloaded files and storing them in 'files'.
 * 2. Reading the files organized by labels: activity and features.
 * 3. Extracting the data with the mean and standard deviation.
-* 3.1. Loading the datasets: reading the tables by activity and subject.
-* 3.2. Binding the data of subjects and activities and storing it in t.
-* 3.3. Doing the same for the test part of the code.
-* 4. Merging the data of t and t2. Setting new labels in the newly created variable. Applying the function factor. Melting the data.
+* 3.1. Loading the datasets for 'train': reading the tables by activity and subject. 
+* 3.2. Binding the data of subjects and activities and storing it in 't'.
+* 3.3. Doing the same (as in steps 3.1. and 3.2.) for the 'test'. Storing the result in 't2'.
+* 4. Merging the data of 't' and 't2'. Setting new labels in the newly created variable. Applying the function factor. Melting the data.
 * 5. Creating the table for the new tidy data.
